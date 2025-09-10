@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My web Page</title>
+    </head>
+
+
+<body>
+<h1 id="test">Test with Header 1</h1>        
+<h2 name="mytest">Test with Header 2</h2>
+<h3 name="mytest">Test with Header 3</h3>
+<h4 class="header">Test with Header 4</h4>
+<h5>Test with Header 5</h5>
+<h6>Test with Header 6</h6>
+
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+
+<div class="newtest">
+<p> This is my para page</p>
+</div>
+
+
+<script>
+    //Element by ID
+var h1tag=document.getElementById("test");
+console.log(h1tag.textContent)
+
+
+//Elements by Name
+var h2tag=document.getElementsByName("mytest");
+console.log(h2tag[1].textContent)
+
+
+//Elements by Class
+var h4tag=document.getElementsByClassName("header");
+console.log(h4tag[0].textContent)
+
+
+//Elements by TagName
+var list=document.getElementsByTagName("li");
+console.log(list[2].textContent)
+
+
+//Element by query Selector - //.class tagname
+var divp=document.querySelector(".newtest p");
+console.log(divp.textContent)
+
+
+//Create an element
+var newelement=document.createElement("button");
+newelement.textContent="This is newly added Element";
+document.body.appendChild(newelement);
+
+
+</script>
+    </body>
+</html>
